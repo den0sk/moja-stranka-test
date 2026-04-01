@@ -1,0 +1,255 @@
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.page-kontakt{
+margin:0;
+font-family:sans-serif;
+color:black;
+background-image: url("../images/bgd2.png");
+background-repeat:no-repeat;
+background-size:100%;
+background-position:top center;
+min-height:85vh;
+overflow-x: hidden;
+}
+
+.page-domov {
+margin:0;
+font-family:sans-serif;
+background-image: url("../images/bgd1-bez.png");
+background-repeat:no-repeat;
+background-size:100%;
+background-position:top center;
+background-attachment: flex;
+min-height:50rem;
+display: flex;
+flex-direction: column;
+}
+
+.page-partneri {
+margin:0;
+font-family:sans-serif;
+color:#FFDF4D; 
+background-image: url("../images/bgd2.png");
+background-repeat:no-repeat;
+background-size:100%;
+background-position:top center;
+min-height:0vh;
+overflow-x: hidden;
+}
+
+
+/* MENU */
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width:100%;
+z-index: 1000;
+background-color:#FAFAFA;
+border-bottom: 2px solid black;
+
+display:flex;
+align-items: center;
+justify-content:space-between;
+padding: 10px 50px;
+}
+
+nav ul {
+list-style:none;
+background:;
+border:0px solid black;
+border-radius:12px;
+padding:16px;
+}
+
+nav ul li {
+display:inline;
+border-right:2px solid black;
+padding:0 10px;
+}
+
+nav ul li:last-child {
+border-right:none;
+}
+
+nav ul li a {
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+.Logo {
+  display: block;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.tabulka {
+    margin-left: 100px;  
+    margin-top: -28rem;
+    border-collapse: collapse; 
+    width: 520px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tabulka td {
+    border: 2px solid black;
+    padding: 10px;           
+    color: black;            
+}
+.spodna-lista1 {
+    position: flex;
+    margin-top: 295vh;
+    width: 100%;            
+    background-color: rgba(0, 0, 0, 0.8); /* Tmavé, mierne priehľadné pozadie */
+    color:white;     /* Tvoja žltá farba textu */
+    padding: 20px 50px;
+    
+    display: flex;
+    justify-content: space-between; /* Rozloží text a odkazy rovnomerne */
+    align-items: center;           /* Vycentruje obsah vertikálne */
+    border-top: 2px solid black; /* Pekná žltá linka navrchu lišty */
+}
+
+.spodna-lista1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.spodna-lista2 {
+    position: static;
+    margin-top: 4rem;
+    width: 100%;            
+    background-color: rgba(0, 0, 0, 0.8); /* Tmavé, mierne priehľadné pozadie */
+    color:white;     /* Tvoja žltá farba textu */
+    padding: 20px 50px;
+    
+    display: flex;
+    justify-content: space-between; /* Rozloží text a odkazy rovnomerne */
+    align-items: center;           /* Vycentruje obsah vertikálne */
+    border-top: 2px solid black; /* Pekná žltá linka navrchu lišty */
+}
+
+.spodna-lista2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.spodna-lista3 {
+    position: static;
+    margin-top: 16rem;
+    width: 100%;            
+    background-color: rgba(0, 0, 0, 0.8); /* Tmavé, mierne priehľadné pozadie */
+    color:white;     /* Tvoja žltá farba textu */
+    padding: 20px 50px;
+    
+    display: flex;
+    justify-content: space-between; /* Rozloží text a odkazy rovnomerne */
+    align-items: center;           /* Vycentruje obsah vertikálne */
+    border-top: 2px solid black; /* Pekná žltá linka navrchu lišty */
+}
+
+.spodna-lista3 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    /* NAV / MENU */
+    nav {
+        padding: 8px 16px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav ul {
+        padding: 8px 4px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    nav ul li {
+        display: inline;
+        border-right: none;
+        padding: 0 6px;
+        font-size: 14px;
+    }
+
+    nav ul li:not(:last-child) {
+        border-right: 1px solid black;
+    }
+
+    .Logo {
+        width: 100px !important;
+    }
+
+    /* POZADIE - background na mobile */
+    .page-domov,
+    .page-partneri,
+    .page-kontakt {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    /* NADPISY */
+    h2 {
+        margin-top: 6rem !important;
+        margin-left: 16px !important;
+        font-size: 32px !important;
+    }
+
+    /* PARTNERI - obrázok */
+    .page-partneri img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* KONTAKT - tabulka */
+    .tabulka {
+        margin-left: 16px !important;
+        margin-top: 2rem !important;
+        width: calc(100% - 32px) !important;
+        font-size: 13px;
+    }
+
+    .tabulka td {
+        padding: 8px 6px;
+        word-break: break-word;
+    }
+
+    /* KONTAKT - mapa */
+    iframe {
+        width: 100% !important;
+        max-width: 100%;
+        height: 300px !important;
+        margin-left: 0 !important;
+        margin-top: 1.5rem !important;
+        display: block;
+    }
+
+    /* FOOTER */
+    .spodna-lista1,
+    .spodna-lista2,
+    .spodna-lista3 {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 16px;
+        margin-top: 2rem;
+        font-size: 13px;
+    }
+
+    .spodna-lista1 {
+        margin-top: 4rem;
+    }
+}
